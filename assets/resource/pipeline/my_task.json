@@ -1,13 +1,13 @@
 {
     "数据生产+不快速挂机": {
         "recognition": "OCR",
-        "expected": "数据生产",
+        "expected": "生产",
         "action": "Click",
         "next": "数据生产领取奖励"
     },
     "数据生产+快速挂机1次": {
         "recognition": "OCR",
-        "expected": "数据生产",
+        "expected": "生产",
         "action": "Click",
         "next": "快速挂机"
     },
@@ -36,8 +36,9 @@
         "next": "数据生产领取奖励"
     },
     "数据生产领取奖励":{
-    	 "recognition": "OCR",
-        "expected": "领取奖励",
+    	 "recognition": "TemplateMatch",
+    	 "pre_delay": 500,
+        "template": "领取奖励.png",
         "action": "Click"
     }
 }
