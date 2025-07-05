@@ -19,13 +19,6 @@
             "path": [
                 "{PROJECT_DIR}/resource"
             ]
-        },
-        {
-            "name": "B 服",
-            "path": [
-                "{PROJECT_DIR}/resource",
-                "{PROJECT_DIR}/resource_bilibili"
-            ]
         }
     ],
     "agent": {
@@ -36,44 +29,28 @@
     },
     "task": [
         {
-            "name": "普通任务",
-            "entry": "MyTask1"
-        },
-        {
-            "name": "选项任务",
-            "entry": "MyTask2",
+            "name": "数据生产",
+            "entry": "数据生产",
             "option": [
-                "任务选项1"
+                "是否快速挂机"
             ]
-        },
-        {
-            "name": "参数任务",
-            "entry": "MyTask3",
-            "option": [
-                "任务选项1"
-            ],
-            "pipeline_override": {}
-        },
-        {
-            "name": "带Custom的任务",
-            "entry": "MyTask4"
         }
     ],
     "option": {
-        "任务选项1": {
+        "是否快速挂机": {
             "cases": [
                 {
-                    "name": "文本1",
+                    "name": "快速挂机1次",
                     "pipeline_override": {
-                        "OcrTask": {
+                        "数据生产+快速挂机1次": {
                             "text": "文本1"
                         }
                     }
                 },
                 {
-                    "name": "文本2",
+                    "name": "不快速挂机",
                     "pipeline_override": {
-                        "OcrTask": {
+                        "数据生产+不快速挂机": {
                             "text": "文本2"
                         }
                     }
