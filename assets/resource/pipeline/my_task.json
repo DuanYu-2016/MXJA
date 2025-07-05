@@ -1,11 +1,43 @@
 {
-    "MyTask1": {},
-    "MyTask2": {},
-    "MyTask3": {},
-    "MyTask4": {
-        "recognition": "Custom",
-        "custom_recognition": "my_reco_222",
-        "action": "Custom",
-        "custom_action": "my_action_111"
+    "数据生产+不快速挂机": {
+        "recognition": "OCR",
+        "expected": "数据生产",
+        "action": "Click",
+        "next": "数据生产领取奖励"
+    },
+    "数据生产+快速挂机1次": {
+        "recognition": "OCR",
+        "expected": "数据生产",
+        "action": "Click",
+        "next": "快速挂机"
+    },
+    "快速挂机":{
+    	 "recognition": "OCR",
+        "expected": "快速挂机",
+        "action": "Click",
+        "next": "快速挂机领取"
+    },
+    "快速挂机领取":{
+    	 "recognition": "OCR",
+        "expected": "快速挂机",
+        "action": "Click",
+        "next": "点击此区域继续"
+    },
+    "点击此区域继续":{
+    	 "recognition": "OCR",
+        "expected": "点击此区域继续",
+        "action": "Click",
+        "next": "取消"
+    },
+    "取消":{
+    	 "recognition": "OCR",
+        "expected": "取消",
+        "action": "Click",
+        "next": "数据生产领取奖励"
+    },
+    "数据生产领取奖励":{
+    	 "recognition": "OCR",
+        "expected": "领取奖励",
+        "action": "Click"
     }
 }
