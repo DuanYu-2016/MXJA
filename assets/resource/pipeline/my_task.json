@@ -117,9 +117,9 @@
         "expected": "作战",
         "action": "Click",
         "post_delay": 500,
-        "next": "竞赛"
+        "next": "竞赛-高阶竞赛"
     },
-    "竞赛":{
+    "竞赛-高阶竞赛":{
     	 "recognition": "OCR",
         "expected": "竞赛",
         "action": "Click",
@@ -354,7 +354,16 @@
         "expected": "一键领取",
         "action": "Click",
         "post_delay": 500,
-        "next": "主页"
+        "next": "点击此区域继续-派遣",
+        "timeout": 1000,
+        "on_error": "主页"
+    },
+    "点击此区域继续-派遣":{
+    	 "recognition": "OCR",
+        "expected": "点击此区域",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "派遣"
     },
     "派遣":{
     	 "recognition": "TemplateMatch",
@@ -500,5 +509,52 @@
         "action": "Click",
         "post_delay": 500,
         "next": "主页"
-	}
+	},
+
+
+
+    "黑客竞赛":{
+    	 "recognition": "OCR",
+        "expected": "作战",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "竞赛-黑客竞赛"
+	},
+    "竞赛-黑客竞赛":{
+    	 "recognition": "OCR",
+        "expected": "竞赛",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "点击黑客竞赛"
+    },
+    "点击黑客竞赛":{
+    	 "recognition": "OCR",
+        "expected": "黑客竞赛",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "挑战次数检测",
+        "timeout": 1000,
+        "on_error": "碾压"
+    },
+    "挑战次数检测":{
+    	 "recognition": "OCR",
+        "expected": "挑战次数：0/5",
+        "action": "DoNothing",
+        "post_delay": 500,
+        "next": "主页"
+    },
+    "碾压":{
+    	 "recognition": "OCR",
+        "expected": "碾压",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "碾压返回"
+    },
+    "碾压返回":{
+    	 "recognition": "TemplateMatch",
+        "template": "返回蓝色.png",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "挑战次数检测"
+    }
 }
