@@ -131,7 +131,9 @@
         "expected": "高阶竞赛",
         "action": "Click",
         "post_delay": 500,
-        "next": "收取积分"
+        "next": "收取积分",
+        "timeout": 500,
+        "on_error": "主页"
     },
     "收取积分":{
     	 "recognition": "OCR",
@@ -347,7 +349,16 @@
         "post_delay": 500,
         "next": "派遣",
         "timeout": 1000,
-        "on_error": "派遣一键领取"
+        "on_error": "全部完成检测"
+    },
+    "全部完成检测":{
+    	 "recognition": "OCR",
+        "expected": "本次派遣任务已全部完成",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "派遣一键领取",
+        "timeout": 1000,
+        "on_error": "主页"
     },
     "派遣一键领取":{
     	 "recognition": "OCR",
@@ -555,6 +566,8 @@
         "template": "返回蓝色.png",
         "action": "Click",
         "post_delay": 500,
-        "next": "挑战次数检测"
+        "next": "挑战次数检测",
+        "timeout": 1000,
+        "on_error": "碾压"
     }
 }
