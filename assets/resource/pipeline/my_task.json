@@ -3,42 +3,588 @@
         "recognition": "OCR",
         "expected": "生产",
         "action": "Click",
+        "post_delay": 500,
         "next": "数据生产领取奖励"
     },
     "数据生产+快速挂机1次": {
         "recognition": "OCR",
         "expected": "生产",
         "action": "Click",
+        "post_delay": 500,
         "next": "快速挂机"
     },
     "快速挂机":{
     	 "recognition": "OCR",
         "expected": "快速挂机",
         "action": "Click",
+        "post_delay": 500,
         "next": "快速挂机领取"
     },
     "快速挂机领取":{
-    	 "recognition": "OCR",
-        "expected": "快速挂机",
+    	 "recognition": "TemplateMatch",
+        "template": "快速挂机.png",
         "action": "Click",
-        "next": "点击此区域继续"
+        "post_delay": 500,
+        "next": "点击此区域继续-取消"
     },
-    "点击此区域继续":{
+    "点击此区域继续-取消":{
     	 "recognition": "OCR",
         "expected": "点击此区域继续",
         "action": "Click",
+        "post_delay": 500,
         "next": "取消"
     },
     "取消":{
     	 "recognition": "OCR",
         "expected": "取消",
         "action": "Click",
+        "post_delay": 500,
         "next": "数据生产领取奖励"
     },
     "数据生产领取奖励":{
+    	 "recognition": "OCR",
+        "expected": "领取奖励",
+        "action": "Click",
+        "post_delay": 1000
+    },
+    
+    
+    
+    "友情点赠送收取":{
+    	 "recognition": "OCR",
+        "expected": "好友",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "一键赠送"
+    },
+    "一键赠送":{
+    	 "recognition": "OCR",
+        "expected": "一键赠送",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "一键收取"
+    },
+    "一键收取":{
+    	 "recognition": "OCR",
+        "expected": "一键收取",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "主页"
+    },
+    
+    
+    
+    "商城每日免费补给":{
+    	 "recognition": "OCR",
+        "expected": "商城",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "补给中心"
+    },
+    "补给中心":{
+    	 "recognition": "OCR",
+        "expected": "补给中心",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "每日补给"
+    },
+    "每日补给":{
+    	 "recognition": "OCR",
+        "expected": "每日补给",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "免费补给"
+    },
+    "免费补给":{
+    	 "recognition": "OCR",
+        "expected": "免费",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "免费补给购买"
+    },
+    "免费补给购买":{
+    	 "recognition": "OCR",
+        "expected": "￥0",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "点击此区域继续-主页"
+    },
+    
+    
+    
+    "高阶竞赛收取积分":{
+    	 "recognition": "OCR",
+        "expected": "作战",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "竞赛-高阶竞赛"
+    },
+    "竞赛-高阶竞赛":{
+    	 "recognition": "OCR",
+        "expected": "竞赛",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "高阶竞赛"
+    },
+    "高阶竞赛":{
+    	 "recognition": "OCR",
+        "expected": "高阶竞赛",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "收取积分",
+        "timeout": 500,
+        "on_error": "主页"
+    },
+    "收取积分":{
+    	 "recognition": "OCR",
+        "expected": "收取积分",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "领取"
+    },
+    "领取":{
+    	 "recognition": "OCR",
+        "expected": "领取",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "点击此区域继续-主页"
+    },
+    "点击此区域继续-主页":{
+    	 "recognition": "OCR",
+        "expected": "点击此区域继续",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "主页"
+    },
+    "主页":{
     	 "recognition": "TemplateMatch",
-    	 "pre_delay": 500,
-        "template": "领取奖励.png",
-        "action": "Click"
+        "template": "主页.png",
+        "action": "Click",
+        "post_delay": 1000
+    },
+    
+    
+    
+    "日常奖励":{
+    	 "recognition": "OCR",
+        "expected": "任务",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "领取全部"
+    },
+    "领取全部":{
+    	 "recognition": "OCR",
+        "expected": "领取全部",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "点击此区域继续-主页",
+        "timeout": 2000,
+        "on_error": "主页"
+    },
+    "周常奖励":{
+    	 "recognition": "OCR",
+        "expected": "任务",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "周常奖励领取"
+    },
+    "周常奖励领取":{
+    	 "recognition": "OCR",
+        "expected": "周常任务",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "领取全部",
+        "timeout": 2000,
+        "on_error": "主页"
+    },
+    
+    
+    
+    "每日演算扫荡":{
+    	 "recognition": "OCR",
+        "expected": "作战",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "资源-每日演算"
+    },
+    "资源-每日演算":{
+    	 "recognition": "OCR",
+        "expected": "资源",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "每日演算"
+    },
+    "每日演算":{
+    	 "recognition": "OCR",
+        "expected": "每日演算",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "测试委托"
+    },
+    "测试委托":{
+    	 "recognition": "OCR",
+        "expected": "测试委托",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "扫荡测试委托",
+        "timeout": 1000,
+        "on_error": "点击扫荡测试委托"
+    },
+    "扫荡测试委托":{
+    	 "recognition": "OCR",
+        "expected": "次数不足",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "返回-入侵培训"
+    },
+    "点击扫荡测试委托":{
+    	 "recognition": "OCR",
+        "expected": "扫荡",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "点此区域继续-扫荡测试委托"
+    },
+    "点此区域继续-扫荡测试委托":{
+    	 "recognition": "OCR",
+        "expected": "此区域继续",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "测试委托"
+    },
+    "返回-入侵培训":{
+    	 "recognition": "OCR",
+        "expected": "返回",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "入侵培训"
+    },
+    "入侵培训":{
+    	 "recognition": "OCR",
+        "expected": "入侵培训",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "扫荡入侵培训",
+        "timeout": 1000,
+        "on_error": "点击扫荡入侵培训"
+    },
+    "扫荡入侵培训":{
+    	 "recognition": "OCR",
+        "expected": "次数不足",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "返回-武装整备"
+    },
+    "点此区域继续-扫荡入侵培训":{
+    	 "recognition": "OCR",
+        "expected": "此区域继续",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "入侵培训"
+    },
+    "点击扫荡入侵培训":{
+    	 "recognition": "OCR",
+        "expected": "扫荡",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "点此区域继续-扫荡入侵培训"
+    },
+    "返回-武装整备":{
+    	 "recognition": "OCR",
+        "expected": "返回",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "武装整备"
+    },
+    "武装整备":{
+    	 "recognition": "OCR",
+        "expected": "武装整备",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "扫荡武装整备",
+        "timeout": 1000,
+        "on_error": "点击扫荡武装整备"
+    },
+    "扫荡武装整备":{
+    	 "recognition": "OCR",
+        "expected": "次数不足",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "主页"
+    },
+    "点击扫荡武装整备":{
+    	 "recognition": "OCR",
+        "expected": "扫荡",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "点此区域继续-扫荡武装整备"
+    },
+    "点此区域继续-扫荡武装整备":{
+    	 "recognition": "OCR",
+        "expected": "此区域继续",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "武装整备"
+    },
+    
+    
+    
+    "日常派遣":{
+    	 "recognition": "OCR",
+        "expected": "作战",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "资源-日常派遣"
+    },
+    "资源-日常派遣":{
+    	 "recognition": "OCR",
+        "expected": "资源",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "派遣界面"
+    },
+    "派遣界面":{
+    	 "recognition": "OCR",
+        "expected": "日常派遣",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "派遣一键领取",
+        "timeout": 1000,
+        "on_error": "全部完成检测"
+    },
+    "派遣一键领取":{
+    	 "recognition": "TemplateMatch",
+        "template": "一键领取蓝色.png",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "点击此区域继续-派遣",
+        "timeout": 1000,
+        "on_error": "主页"
+    },
+    "全部完成检测":{
+    	 "recognition": "OCR",
+        "expected": "本次派遣任务已全部完成",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "主页",
+        "timeout": 1000,
+        "on_error": "派遣"
+    },
+    "点击此区域继续-派遣":{
+    	 "recognition": "OCR",
+        "expected": "点击此区域",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "派遣"
+    },
+    "派遣":{
+    	 "recognition": "TemplateMatch",
+        "template": "派遣白色.png",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "一键派遣"
+    },
+    "一键派遣":{
+    	 "recognition": "OCR",
+        "expected": "一键派遣",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "点击派遣"
+    },
+    "点击派遣":{
+    	 "recognition": "TemplateMatch",
+        "template": "派遣蓝色.png",
+        "action": "Click",
+        "post_delay": 1500,
+        "next": "派遣",
+        "timeout": 1000,
+        "on_error": "派遣一键领取"
+    },
+    
+    
+    
+    "专项突破":{
+    	 "recognition": "OCR",
+        "expected": "作战",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "资源-专项突破"
+    },
+    "资源-专项突破":{
+    	 "recognition": "OCR",
+        "expected": "资源",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "专项突破界面"
+    },
+    "专项突破界面":{
+    	 "recognition": "OCR",
+        "expected": "专项突破",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "点击肃清"
+    },
+    "点击肃清":{
+    	 "recognition": "OCR",
+        "expected": "肃清",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "肃清"
+    },
+    "肃清":{
+    	 "recognition": "OCR",
+        "expected": "开始入侵",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "肃清点击开始入侵"
+    },
+    "肃清点击开始入侵":{
+    	 "recognition": "OCR",
+        "expected": "开始入侵",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "返回肃清"
+    },
+    "返回肃清":{
+    	 "recognition": "OCR",
+        "expected": "返回",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "返回专项突破-攻破"
+	},
+    "返回专项突破-攻破":{
+    	 "recognition": "OCR",
+        "expected": "返回",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "点击攻破"
+    },
+    "点击攻破":{
+    	 "recognition": "OCR",
+        "expected": "攻破",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "攻破"
+    },
+    "攻破":{
+    	 "recognition": "OCR",
+        "expected": "开始入侵",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "攻破点击开始入侵"
+    },
+    "攻破点击开始入侵":{
+    	 "recognition": "OCR",
+        "expected": "开始入侵",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "返回攻破"
+    },
+    "返回攻破":{
+    	 "recognition": "OCR",
+        "expected": "返回",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "返回专项突破-药到病除"
+	},
+    "返回专项突破-药到病除":{
+    	 "recognition": "OCR",
+        "expected": "返回",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "点击药到病除"
+    },
+    "点击药到病除":{
+    	 "recognition": "OCR",
+        "expected": "药到病除",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "药到病除"
+    },
+    "药到病除":{
+    	 "recognition": "OCR",
+        "expected": "开始入侵",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "药到病除点击开始入侵"
+    },
+    "药到病除点击开始入侵":{
+    	 "recognition": "OCR",
+        "expected": "开始入侵",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "返回药到病除"
+    },
+    "返回药到病除":{
+    	 "recognition": "OCR",
+        "expected": "返回",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "主页"
+	},
+
+
+
+    "黑客竞赛":{
+    	 "recognition": "OCR",
+        "expected": "作战",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "竞赛-黑客竞赛"
+	},
+    "竞赛-黑客竞赛":{
+    	 "recognition": "OCR",
+        "expected": "竞赛",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "点击黑客竞赛"
+    },
+    "点击黑客竞赛":{
+    	 "recognition": "OCR",
+        "expected": "黑客竞赛",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "挑战次数检测",
+        "timeout": 1000,
+        "on_error": "碾压"
+    },
+    "挑战次数检测":{
+    	 "recognition": "OCR",
+        "expected": "挑战次数：0/5",
+        "action": "DoNothing",
+        "post_delay": 500,
+        "next": "主页"
+    },
+    "碾压":{
+    	 "recognition": "OCR",
+        "expected": "碾压",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "碾压返回"
+    },
+    "碾压返回":{
+    	 "recognition": "TemplateMatch",
+        "template": "返回蓝色.png",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "挑战次数检测",
+        "timeout": 1000,
+        "on_error": "碾压"
+    },
+    
+    
+    
+    "邮件":{
+    	 "recognition": "TemplateMatch",
+        "template": "邮件.png",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "邮件全部处理"
+    },
+    "邮件全部处理":{
+    	 "recognition": "OCR",
+        "expected": "全部处理",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "主页"
     }
 }
