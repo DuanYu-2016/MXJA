@@ -347,27 +347,27 @@
         "expected": "日常派遣",
         "action": "Click",
         "post_delay": 500,
-        "next": "派遣",
+        "next": "派遣一键领取",
         "timeout": 1000,
         "on_error": "全部完成检测"
+    },
+    "派遣一键领取":{
+    	 "recognition": "TemplateMatch",
+        "template": "一键领取蓝色.png",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "点击此区域继续-派遣",
+        "timeout": 1000,
+        "on_error": "主页"
     },
     "全部完成检测":{
     	 "recognition": "OCR",
         "expected": "本次派遣任务已全部完成",
         "action": "Click",
         "post_delay": 500,
-        "next": "派遣一键领取",
+        "next": "主页",
         "timeout": 1000,
-        "on_error": "主页"
-    },
-    "派遣一键领取":{
-    	 "recognition": "OCR",
-        "expected": "一键领取",
-        "action": "Click",
-        "post_delay": 500,
-        "next": "点击此区域继续-派遣",
-        "timeout": 1000,
-        "on_error": "主页"
+        "on_error": "派遣"
     },
     "点击此区域继续-派遣":{
     	 "recognition": "OCR",
@@ -569,5 +569,22 @@
         "next": "挑战次数检测",
         "timeout": 1000,
         "on_error": "碾压"
+    },
+    
+    
+    
+    "邮件":{
+    	 "recognition": "TemplateMatch",
+        "template": "邮件.png",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "邮件全部处理"
+    },
+    "邮件全部处理":{
+    	 "recognition": "OCR",
+        "expected": "全部处理",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "主页"
     }
 }
