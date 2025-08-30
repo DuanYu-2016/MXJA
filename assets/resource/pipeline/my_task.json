@@ -328,80 +328,6 @@
     
     
     
-    "日常派遣":{
-    	 "recognition": "OCR",
-        "expected": "作战",
-        "action": "Click",
-        "post_delay": 500,
-        "next": "资源-日常派遣"
-    },
-    "资源-日常派遣":{
-    	 "recognition": "OCR",
-        "expected": "资源",
-        "action": "Click",
-        "post_delay": 500,
-        "next": "派遣界面"
-    },
-    "派遣界面":{
-    	 "recognition": "OCR",
-        "expected": "日常派遣",
-        "action": "Click",
-        "post_delay": 500,
-        "next": "派遣一键领取",
-        "timeout": 1000,
-        "on_error": "全部完成检测"
-    },
-    "派遣一键领取":{
-    	 "recognition": "TemplateMatch",
-        "template": "一键领取蓝色.png",
-        "action": "Click",
-        "post_delay": 500,
-        "next": "点击此区域继续-派遣",
-        "timeout": 1000,
-        "on_error": "主页"
-    },
-    "全部完成检测":{
-    	 "recognition": "OCR",
-        "expected": "本次派遣任务已全部完成",
-        "action": "Click",
-        "post_delay": 500,
-        "next": "主页",
-        "timeout": 1000,
-        "on_error": "派遣"
-    },
-    "点击此区域继续-派遣":{
-    	 "recognition": "OCR",
-        "expected": "点击此区域",
-        "action": "Click",
-        "post_delay": 500,
-        "next": "派遣"
-    },
-    "派遣":{
-    	 "recognition": "TemplateMatch",
-        "template": "派遣白色.png",
-        "action": "Click",
-        "post_delay": 500,
-        "next": "一键派遣"
-    },
-    "一键派遣":{
-    	 "recognition": "OCR",
-        "expected": "一键派遣",
-        "action": "Click",
-        "post_delay": 500,
-        "next": "点击派遣"
-    },
-    "点击派遣":{
-    	 "recognition": "TemplateMatch",
-        "template": "派遣蓝色.png",
-        "action": "Click",
-        "post_delay": 1500,
-        "next": "派遣",
-        "timeout": 1000,
-        "on_error": "派遣一键领取"
-    },
-    
-    
-    
     "专项突破":{
     	 "recognition": "OCR",
         "expected": "作战",
@@ -585,6 +511,8 @@
         "expected": "全部处理",
         "action": "Click",
         "post_delay": 500,
-        "next": "主页"
+        "next": "点击此区域继续-主页",
+        "timeout": 1000,
+        "on_error": "主页"
     }
 }
